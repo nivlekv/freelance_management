@@ -1,6 +1,8 @@
 # freelance_management
 
-This project will start Swagger For Test the API input 
+This project is using Microsoft .NET 8.0 and MySQL to develop 
+
+After project run will start Swagger For Test the API input 
 
 A fictional company, CDN - Complete Developer Network is going to build a list of freelancers.
 
