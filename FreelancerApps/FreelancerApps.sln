@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreelancersApi", "FreelancersApi\FreelancersApi.csproj", "{CD128948-D2ED-45A6-A853-B85C3A13F18B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{4E7E9532-D640-4846-A233-FA0DD03EE0EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LIB", "LIB", "{953FC6B7-F355-4EFB-92DD-F30F0FE6C785}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{0FCD519E-6150-431C-AA96-9AC6A99697B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{31285224-6145-4564-A866-3C813CF00FE2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLL", "BLL", "{42EE87A7-6A4F-4F74-831B-273332790888}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD128948-D2ED-45A6-A853-B85C3A13F18B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD128948-D2ED-45A6-A853-B85C3A13F18B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD128948-D2ED-45A6-A853-B85C3A13F18B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD128948-D2ED-45A6-A853-B85C3A13F18B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CD128948-D2ED-45A6-A853-B85C3A13F18B} = {31285224-6145-4564-A866-3C813CF00FE2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F8C82C0-E68F-4EE2-B71C-D3A69CAEA81F}
+	EndGlobalSection
+EndGlobal
