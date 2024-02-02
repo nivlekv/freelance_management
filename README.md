@@ -15,7 +15,11 @@ Such that they could have a directory of contact get people for their job.
 When request API need to pass in Cmd field to get thru the validation
 
 GET - UserDetail
+
 POST - UserCreate
+
 PUT - UserUpdate
+
 DELETE - UserDelete 
+
 LIST - UserList
