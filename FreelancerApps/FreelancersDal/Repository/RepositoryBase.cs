@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
-using System.Reflection;
-using System.Security.Cryptography.X509Certificates;
-using System.Linq.Dynamic.Core;
-using HotelLiveModel.Enum;
-using MySql.Data.MySqlClient;
-
-namespace HotelLiveDAL
+﻿namespace FreelancersDal
 {
     public class RepositoryBase<T> : IRepositoryBase<T> where T : MySqlEntity
     {

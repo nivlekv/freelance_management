@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreelancersModel", "Freelan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreelancersDal", "FreelancersDal\FreelancersDal.csproj", "{7C8ED92A-CC0F-477C-BB68-6C7B497FB24B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreelancersLib", "FreelancersLib\FreelancersLib.csproj", "{01C82271-27C8-47A1-BE1C-1D2D6235D317}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{7C8ED92A-CC0F-477C-BB68-6C7B497FB24B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C8ED92A-CC0F-477C-BB68-6C7B497FB24B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C8ED92A-CC0F-477C-BB68-6C7B497FB24B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01C82271-27C8-47A1-BE1C-1D2D6235D317}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01C82271-27C8-47A1-BE1C-1D2D6235D317}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01C82271-27C8-47A1-BE1C-1D2D6235D317}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01C82271-27C8-47A1-BE1C-1D2D6235D317}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -45,6 +51,7 @@ Global
 		{CD128948-D2ED-45A6-A853-B85C3A13F18B} = {31285224-6145-4564-A866-3C813CF00FE2}
 		{A9F6A0FA-6E41-4141-858B-70B01CB24173} = {C8334385-05E3-4914-96F6-C365FAD2E66C}
 		{7C8ED92A-CC0F-477C-BB68-6C7B497FB24B} = {4E7E9532-D640-4846-A233-FA0DD03EE0EB}
+		{01C82271-27C8-47A1-BE1C-1D2D6235D317} = {953FC6B7-F355-4EFB-92DD-F30F0FE6C785}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F8C82C0-E68F-4EE2-B71C-D3A69CAEA81F}

@@ -3,6 +3,7 @@ using System;
 using FreelancersDal;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FreelancersDal.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    partial class RepositoryContextModelSnapshot : ModelSnapshot
+    [Migration("20240202165721_InitialDatabase")]
+    partial class InitialDatabase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -91,12 +94,15 @@ namespace FreelancersDal.Migrations
                         .HasColumnType("DateTime")
                         .HasColumnName("ModifiedDate");
 
-                    b.Property<long>("UserId")
+                    b.Property<long?>("TblusersID")
                         .HasColumnType("BIGINT(20)");
+
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("TblusersID");
 
                     b.ToTable("user_hobbies");
                 });
@@ -133,36 +139,35 @@ namespace FreelancersDal.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(30)");
 
-                    b.Property<long>("UserId")
+                    b.Property<long?>("TblusersID")
                         .HasColumnType("BIGINT(20)");
+
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("TblusersID");
 
                     b.ToTable("user_skillsets");
                 });
 
             modelBuilder.Entity("FreelancersDal.Model.TblUserHobby", b =>
                 {
-                    b.HasOne("FreelancersDal.Model.TblUser", "TblUsers")
+                    b.HasOne("FreelancersDal.Model.TblUser", "Tblusers")
                         .WithMany("TblUserHobbies")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("TblusersID");
 
-                    b.Navigation("TblUsers");
+                    b.Navigation("Tblusers");
                 });
 
             modelBuilder.Entity("FreelancersDal.Model.TblUserSkillSet", b =>
                 {
-                    b.HasOne("FreelancersDal.Model.TblUser", "TblUsers")
+                    b.HasOne("FreelancersDal.Model.TblUser", "Tblusers")
                         .WithMany("TblUserSkillSets")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("TblusersID");
 
-                    b.Navigation("TblUsers");
+                    b.Navigation("Tblusers");
                 });
 
             modelBuilder.Entity("FreelancersDal.Model.TblUser", b =>

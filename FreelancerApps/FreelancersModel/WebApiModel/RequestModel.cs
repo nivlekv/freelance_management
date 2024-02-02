@@ -1,21 +1,14 @@
-﻿using HotelLiveModel.Enum;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Text.Json.Serialization;
-
-namespace HotelLiveModel.WebApiModel
+﻿namespace FreelancersModel.WebApiModel
 {
     public class BaseRequestModel : BaseModel
     {
-        public string Cmd { get; set; }
+        public string Cmd { get; set; } = string.Empty;
         public Guid SeqNo { get; set; } = Guid.NewGuid();
-        public long TimeSpan { get; set; }
-        public string ApiKey { get; set; } //Public Key
-        public string Ip { get; set; }
-        public string Signature { get; set; }
-        public string AppVersion { get; set; }
-        public short ShopID { get; set; }
+        public long TimeSpan { get; set; } = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+        public string ApiKey { get; set; } = string.Empty; //No use for easier demo, usage is for Hash key in Signature 
+        public string Ip { get; set; } = string.Empty;
+        public string Signature { get; set; } = string.Empty;  // No use for easier demo, Usage is for Verified the Parameter Value Integrity 
+        public string AppVersion { get; set; } = "v1.0";        
 
         public BaseRequestModel()
         {
@@ -45,46 +38,5 @@ namespace HotelLiveModel.WebApiModel
         {
             Cmd = GetType().Name.Replace("RequestModel", "");
         }
-    }
-    public class LoginRequestModel : BaseRequestModel
-    {
-        public string UserName { get; set; }
-        public string Password { get; set; }
-        public LoginRequestModel()
-        {
-            Cmd = GetType().Name.Replace("RequestModel", "");
-        }
-    }
-
-    public class InitialRequestModel : BaseRequestModel
-    {
-        public InitialRequestModel()
-        {
-            Cmd = GetType().Name.Replace("RequestModel", "");
-        }
-    }
-
-    public class RefreshTokenRequestModel : BaseRequestModel
-    {
-        public string UserName { get; set; }
-        public RefreshTokenRequestModel()
-        {
-            Cmd = GetType().Name.Replace("RequestModel", "");
-        }
-    }
-
-    public class ChangePasswordRequestModel : BaseRequestModel
-    {
-        public long Id { get; set; }
-        public string OldPassword { get; set; }
-        public string NewPassword { get; set; }        
-        public string RequestBy { get; set; }
-    }
-
-    public class ResetPasswordRequestModel : BaseRequestModel
-    {
-        public string UserName { get; set; }
-        public string NewPassword { get; set; }
-        public string ResetToken { get; set; }
     }
 }

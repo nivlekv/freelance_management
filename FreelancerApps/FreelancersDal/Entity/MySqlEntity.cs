@@ -1,9 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using HotelLiveModel.Entity;
-
-namespace HotelLiveDAL
+﻿namespace FreelancersDal
 {
     public abstract class MySqlEntity : IEntity
     {
@@ -12,15 +7,15 @@ namespace HotelLiveDAL
         public long ID { get; set; }
 
         [Column("CreateBy", TypeName = "varchar(20)")]
-        public abstract string CreateBy { get; set; }
+        public string CreateBy { get; set; } = string.Empty;
 
         [Column("CreateDate", TypeName = "DateTime")]
-        public abstract DateTime CreateDate { get; set; }
+        public DateTime CreateDate { get; set; }
 
         [Column("ModifiedBy", TypeName = "varchar(20)")]
-        public abstract string ModifiedBy { get; set; }
+        public string ModifiedBy { get; set; } = string.Empty;
 
         [Column("ModifiedDate", TypeName = "DateTime")]
-        public abstract DateTime ModifiedDate { get; set; }
+        public DateTime ModifiedDate { get; set; }
     }
 }
